@@ -1,13 +1,228 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">
-    <base href="./">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-<style>html,body{margin:0;padding:0}</style><link rel="stylesheet" href="styles.2f8077d21b7d6ef9.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.2f8077d21b7d6ef9.css"></noscript></head>
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="modulus, architektura, architecture, architektonicka kancelaria, modulus sk, modulus dunajska streda, modulus slovensko, modulus sro, modulus design, modulus architektura">
+    <meta name="description" content="modulus,Architektúra a dizajn,Modulus Dunajská Streda,Modulus s. r. o.,Modulus s. r. o. Dunajská Streda,Modulus Slovakia,Modulus kancelária, Kontakt Modulus">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="owner" content="Modulus s. r. o.">
+    <meta name="copyright" content="Modulus s. r. o.">
+    <meta name="author" content="Modulus s. r. o.">
+    <meta name="designer" content="Modulus s. r. o.">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=4.0, width=device-width">
+    <meta name="robots" content="all">
+    <meta name="googlebot" content="index">
+    
+    <title>Modulus Dunajská Streda</title>
 
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 <body>
-    <app-root></app-root>
-<script src="runtime.9da78c41fa347f84.js" type="module"></script><script src="polyfills.795ea70b620544c3.js" type="module"></script><script src="main.5678549be8551e25.js" type="module"></script>
+    <div class="modal_overlay">
+        <div class="picture"></div>
+        <div class="close" id="close"><i class="fa fa-close"></i></div>
+    </div>
+    <div class="navbar">
+        <span class="logo">MODULUS s. r. o.</span>
+        <span class="nav_buttons">
+            <button type="button" onclick="scrollFunc('home')">Domov</button>
+            <button type="button" onclick="scrollFunc('gallery')">Galéria</button>
+            <button type="button" onclick="scrollFunc('contact')">Kontakt</button>
+        </span>
+    </div>
+    <div class="mobile_navbar">
+        <span class="logo">MODULUS s. r. o.</span>
+        <span class="nav_buttons">
+            <i class="fa-solid fa-bars" onclick="toggleMobileNavButtons()"></i>
+        </span>
+    </div>
+    <div class="mobile_nav_buttons">
+        <button type="button" onclick="toggleMobileNavButtons()"><i class="fa-solid fa-xmark"></i></button>
+        <button type="button" onclick="scrollFunc('home')">Domov</button>
+        <button type="button" onclick="scrollFunc('gallery')">Galéria</button>
+        <button type="button" onclick="scrollFunc('contact')">Kontakt</button>
+    </div>
+    <div class="body">
+        <div class="home border-bottom" id="home">
+            <div class="body_container">
+                <div class="image_box">
+                    <div class="image_flip horizontal">
+                        <div class="front">
+                            <img src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg" alt="modern design">
+                        </div>
+                        <div class="back">
+                            <img src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg" alt="modern design">
+                        </div>
+                    </div>
+                    <div class="image_flip vertical rounded">
+                        <div class="front">
+                            <img src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg" alt="modern design">
+                        </div>
+                        <div class="back">
+                            <img src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg" alt="modern design">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery border-bottom" id="gallery">
+            <div class="gallery_headline">
+                <h1 class="white">Galéria</h1>
+            </div>
+            <div class="gallery_container">
+                <div class="gallery_box">
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+                <div class="gallery_box">
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+                <div class="gallery_box">
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+                <div class="gallery_box">
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery_picture" data-src="https://decombo.com/wp-content/uploads/2020/10/modern-dekorasyon.jpg">
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact" id="contact">
+            <div class="image"></div>
+            <div class="contact_headline">
+                <h1 class="white">Kontakt</h1>
+            </div>
+            <div class="contact_container">
+                <div class="contact_data border-bottom">
+                    <h2 class="white">Designers</h2>
+                    <div class="designer_box">
+                        <div class="designers">
+                            <div class="white mg-top-5">Zsolt Molnár</div>
+                            <div class="white mg-top-5">Zsolt Molnár</div>
+                            <div class="white mg-top-5">Zsolt Molnár</div>
+                            <div class="white mg-top-5">Zsolt Molnár</div>
+                            <div class="white mg-top-5">Zsolt Molnár</div>
+                        </div>
+                        <div class="designers mg-top-5">
+                            <div class="white mg-top-5">Balázs Molnár</div>
+                            <div class="white mg-top-5">Balázs Molnár</div>
+                            <div class="white mg-top-5">Balázs Molnár</div>
+                            <div class="white mg-top-5">Balázs Molnár</div>
+                            <div class="white mg-top-5">Balázs Molnár</div>
+                        </div>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d561.2869420160313!2d17.61117449508267!3d47.99543652146249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476b9de7bd033d57%3A0xe82441394b8bb0b0!2sMODULUS%20S.R.O.!5e0!3m2!1shu!2ssk!4v1672253235464!5m2!1shu!2ssk" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                        
+                    </div>
+                </div>
+                <div class="contact_form border-bottom">
+                    <form onsubmit="submit()">
+                        <div class="input_box">
+                            <label class="white"><span class="red">*</span> Meno</label>
+                            <input type="text" name="name" placeholder="Meno" required>
+                        </div>
+                        <div class="input_box">
+                            <label class="white"><span class="red">*</span> E-mail</label>
+                            <input type="text" name="mail" placeholder="E-mailová adresa" required>
+                        </div>
+                        <div class="input_box">
+                            <label class="white"><span class="red">*</span> Message</label>
+                            <textarea name="message" rows="10" required></textarea>
+                        </div>
+                        <div class="input_box button">
+                            <button type="submit">Poslať</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="google_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d561.2869420160313!2d17.61117449508267!3d47.99543652146249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476b9de7bd033d57%3A0xe82441394b8bb0b0!2sMODULUS%20S.R.O.!5e0!3m2!1shu!2ssk!4v1672253235464!5m2!1shu!2ssk" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+        </div>
+    <script>
+        $(window).on('load', function (){
+            $('div.gallery_picture').each((index, element) => {
+                const bgUrl = $(element).attr('data-src');
+                $(element).css('background-image', 'url('+bgUrl+')');
+            })
+        })
+        $(document).on('scroll', () => {
+            const bodyHeight = $(document).height();
+            const scrollHeight = $(document).scrollTop();
+            const contactHeight = $('#contact').height();
 
+            const pixelWhenMapHides = 400;
 
-</body></html>
+            if((bodyHeight - scrollHeight - contactHeight) < pixelWhenMapHides){
+                $('div.google_map').addClass('hide')
+            }else{
+                $('div.google_map').removeClass('hide')
+            }
+        })
+        $(document).on('click', '.gallery_picture', function() {
+            const src = $(this).attr('data-src');
+            $('div.modal_overlay .picture').css('background-image', 'url('+src+')');
+            $('div.modal_overlay').show('fast')
+        })
+        $(document).on('click', 'i.fa.fa-close', function(){
+            $('div.modal_overlay .picture').css('background-image', 'url()');
+            $('div.modal_overlay').hide('fast')
+        })
+
+        function scrollFunc(id){
+            $('html').animate({
+                scrollTop: $('#'+id).offset().top
+            }, 300)
+        }
+        function toggleMobileNavButtons(){
+            $('div.mobile_nav_buttons').toggleClass('open')
+        }
+    </script>
+</body>
+</html>
